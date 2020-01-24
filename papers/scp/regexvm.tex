@@ -117,7 +117,7 @@ converting REs to their corresponding finite state machines or use REs derivativ
 input string. In this work, we investigate the suitability of another approach: instead of
 using derivatives or generating a finite state machine for a given RE, we developed a virtual machine
 (VM) for parsing regular languages, in such a way that a RE is merely a program executed by the VM
-over the input string. We show that the proposed semantics is sound and complete w.r.t. a standard
+over the input string. We show that the proposed semantics is sound w.r.t. a standard
 inductive semantics for RE and that the evidence produced by it denotes a valid parsing result.
 All of our results are formalized in Coq proof assistant and from it we extract a certified algorithm
 which we use to build a RE parsing tool using Haskell programming language. Experiments comparing the
@@ -527,7 +527,7 @@ The first tree is built by the left operand of choice. Then it is marked by the
 bit $0_b$. Second tree is built by choice's right operand and then is marked by
 bit $1_b$. Last parse tree is again processed by the left
 alternative of choice and then is represented by the bit $0_b$. Finally, we
-finish the code by the bit $1_b$, which ends the matching list build by the
+finish the code using the bit $1_b$, which ends the matching list build by the
 Kleene star operator.
 
 \begin{center}
@@ -1321,7 +1321,7 @@ settings for using data-types and functions of Haskell's
 Prelude\footnote{Prelude is the name of the Haskell library automatically loaded
 in any Haskell module~\cite{Haskell98}.}.
 
-The extracted Haskell code for our VM interpreter has 259 lines. In order to use 
+The extracted Haskell code for our VM interpreter has 280 lines. In order to use 
 the algorithm, we build a grep-like command line tool, which is avaliable at 
 project's on-line repository~\cite{regexvm-rep}. 
 
